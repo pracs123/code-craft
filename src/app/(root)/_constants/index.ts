@@ -20,9 +20,7 @@ export const LANGUAGE_CONFIG: LanguageConfig = {
     logoPath: "/javascript.png",
     pistonRuntime: { language: "javascript", version: "18.15.0" }, // api that we're gonna be using
     monacoLanguage: "javascript",
-    defaultCode: `// JavaScript Playground
-
-console.log('Sum of numbers:', sum);`,
+    defaultCode: `//Write the program to print hello world`,
   },
 //   typescript: {
 //     id: "typescript",
