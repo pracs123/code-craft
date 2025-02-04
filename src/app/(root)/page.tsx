@@ -9,6 +9,7 @@ export default function Home() {
       name: "Debugging Challenge 1",
       description: "Fix the issues in the given code and get high scores!",
       startTime: "2025-02-10T10:00:00Z", // Example date
+      category: "Coding", // Added category
     },
   ];
 
@@ -24,9 +25,8 @@ export default function Home() {
             ))}
           </div>
         </section>
-        {/* <ResizablePanels /> */}
-
       </div>
     </div>
   );
 }
+

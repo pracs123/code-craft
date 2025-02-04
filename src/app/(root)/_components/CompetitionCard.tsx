@@ -2,10 +2,18 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Search, Tag, X, Grid, Layers } from "lucide-react"; // Using lucide icons
-import ResizablePanels from './ResizablePanels'; // Import the ResizablePanels component
+import { Search, Tag, X, Grid, Layers } from "lucide-react";
+import ResizablePanels from './ResizablePanels';
 
-export default function CompetitionCard({ competition }) {
+// Define the Competition interface
+interface Competition {
+  name: string;
+  description: string;
+  startTime: string;
+  category: string;
+}
+
+export default function CompetitionCard({ competition }: { competition: Competition }) {
   const [isJoined, setIsJoined] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -14,13 +22,12 @@ export default function CompetitionCard({ competition }) {
   const { name, description, startTime, category } = competition;
 
   const handleJoin = () => {
-    setIsJoined(true); // Set to true when joining
+    setIsJoined(true);
   };
 
   if (isJoined) {
-    return <ResizablePanels />; // Show the ResizablePanels component after joining
+    return <ResizablePanels />;
   }
-
   return (
     <div className="min-h-screen bg-[#0a0a0f] flex items-center justify-center">
       <div className="w-full h-full max-w-7xl mx-auto px-4 py-12 bg-[#121212] rounded-xl shadow-lg">
